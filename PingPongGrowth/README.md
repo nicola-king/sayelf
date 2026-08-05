@@ -92,12 +92,12 @@ Detect   →  Search Real Talk → Design Hooks → Ready Content
 
 ```bash
 ./scripts/growth-cli.sh detect  "帮我做视频号涨粉"
-./scripts/growth-cli.sh search  "美妆" --days 14
-./scripts/growth-cli.sh design  视频号 <structure>
-./scripts/growth-cli.sh cross   "职场" 视频号 公众号 Instagram
+./scripts/growth-cli.sh search  "美妆" --days 14 --conversations "问题？\\n常见反对意见"
+./scripts/growth-cli.sh design  视频号 "问题" "反对意见" "融合后的行动解法"
+./scripts/growth-cli.sh cross   "职场" X TikTok Instagram --conversations "问题？\\n常见反对意见"
 ```
 
-可作为 MCP 工具暴露：`growth_detect` · `growth_search` · `growth_design` · `growth_cross`
+MCP 工具：`growth_detect` · `growth_search` · `growth_design` · `growth_cross` · `growth_update_check`
 
 ---
 
