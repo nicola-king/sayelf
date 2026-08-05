@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "pingpong-growth": {
+      "command": "python",
+      "args": ["-m", "pingpong_growth.server"],
+      "cwd": "PingPongGrowth"
+    }
+  }
+}
