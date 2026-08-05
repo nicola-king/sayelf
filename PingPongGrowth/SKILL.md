@@ -5,6 +5,10 @@ description: Modular intelligent playbook for cross-platform follower growth. Au
 
 # Social Media Growth Playbook
 
+## Runtime
+
+This skill ships with a real MCP server in `pingpong_growth/server.py`. Install it with `python -m pip install -e .`; use stdio for Codex and local clients, or Streamable HTTP at `/mcp` for ChatGPT Developer Mode. The server is deterministic and offline: pass conversation notes into `growth_search` instead of implying that it fetches social networks.
+
 ## Goal
 Automate “蹭热点但不照抄”: search real ping-pong conversations → design platform-native hooks → output ready structures. Modular, low-entropy, CLI/MCP compatible.
 

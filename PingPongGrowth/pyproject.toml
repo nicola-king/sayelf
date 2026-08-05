@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pingpong-growth"
+version = "0.2.0"
+description = "Platform-native social media hook generation through an MCP server."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.27.0"]
+
+[project.scripts]
+pingpong-growth = "pingpong_growth.server:main"
+
+[tool.setuptools.packages.find]
+include = ["pingpong_growth*"]

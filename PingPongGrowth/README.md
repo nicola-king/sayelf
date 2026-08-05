@@ -7,6 +7,18 @@
 
 </div>
 
+## Working MCP server
+
+This repository includes an installable Python MCP server, not only a CLI stub.
+
+```bash
+python -m pip install -e .
+pingpong-growth                         # stdio for Codex and local MCP clients
+python -m pingpong_growth.server --transport streamable-http --host 0.0.0.0 --port 8000
+```
+
+The HTTP server exposes `/mcp` for ChatGPT Developer Mode. See `INSTALL.md` for setup details. The tools are `growth_detect`, `growth_search`, `growth_design`, `growth_cross`, and `growth_update_check`.
+
 ---
 
 ### 中文简介
@@ -80,12 +92,12 @@ Detect   →  Search Real Talk → Design Hooks → Ready Content
 
 ```bash
 ./scripts/growth-cli.sh detect  "帮我做视频号涨粉"
-./scripts/growth-cli.sh search  "美妆" --days 14
-./scripts/growth-cli.sh design  视频号 <structure>
-./scripts/growth-cli.sh cross   "职场" 视频号 公众号 Instagram
+./scripts/growth-cli.sh search  "美妆" --days 14 --conversations "问题？\\n常见反对意见"
+./scripts/growth-cli.sh design  视频号 "问题" "反对意见" "融合后的行动解法"
+./scripts/growth-cli.sh cross   "职场" X TikTok Instagram --conversations "问题？\\n常见反对意见"
 ```
 
-可作为 MCP 工具暴露：`growth_detect` · `growth_search` · `growth_design` · `growth_cross`
+MCP 工具：`growth_detect` · `growth_search` · `growth_design` · `growth_cross` · `growth_update_check`
 
 ---
 
