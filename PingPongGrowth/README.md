@@ -7,6 +7,18 @@
 
 </div>
 
+## Working MCP server
+
+This repository includes an installable Python MCP server, not only a CLI stub.
+
+```bash
+python -m pip install -e .
+pingpong-growth                         # stdio for Codex and local MCP clients
+python -m pingpong_growth.server --transport streamable-http --host 0.0.0.0 --port 8000
+```
+
+The HTTP server exposes `/mcp` for ChatGPT Developer Mode. See `INSTALL.md` for setup details. The tools are `growth_detect`, `growth_search`, `growth_design`, `growth_cross`, and `growth_update_check`.
+
 ---
 
 ### 中文简介
