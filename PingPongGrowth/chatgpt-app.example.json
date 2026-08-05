@@ -1,0 +1,6 @@
+{
+  "name": "pingpong-growth",
+  "mcp_url": "https://YOUR_PUBLIC_HOST.example.com/mcp",
+  "transport": "streamable-http",
+  "local_command": "python -m pingpong_growth.server --transport streamable-http --host 0.0.0.0 --port 8000"
+}
