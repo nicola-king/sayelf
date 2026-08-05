@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sayelf Conversations</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="module" src="./src/app.js"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <span>Sayelf</span>
+        <button type="button" data-new-conversation>New</button>
+      </div>
+      <nav class="conversation-list" aria-label="Conversations" data-conversation-list></nav>
+    </aside>
+
+    <main class="workspace">
+      <header class="conversation-header">
+        <div>
+          <h1 data-active-title>No conversation selected</h1>
+          <p data-active-meta>Create a conversation to get started.</p>
+        </div>
+        <div class="actions">
+          <button type="button" data-rename-conversation>Rename</button>
+          <button type="button" data-export-conversation>Copy markdown</button>
+          <button type="button" class="danger" data-delete-conversation>Delete</button>
+        </div>
+      </header>
+
+      <section class="empty-state" data-empty-state>
+        <h2>Keep every thread organized</h2>
+        <p>Create a conversation, switch between threads, and save messages locally.</p>
+      </section>
+
+      <section class="message-list" aria-live="polite" data-message-list></section>
+
+      <form class="composer" data-message-form>
+        <label>
+          Role
+          <select data-role-select>
+            <option value="user">User</option>
+            <option value="assistant">Assistant</option>
+            <option value="note">Note</option>
+          </select>
+        </label>
+        <label class="composer__message">
+          Message
+          <textarea
+            data-message-input
+            placeholder="Write the next message..."
+            rows="3"
+            required
+          ></textarea>
+        </label>
+        <button type="submit">Add message</button>
+      </form>
+    </main>
+  </body>
+</html>
